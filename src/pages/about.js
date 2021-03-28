@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../layouts/layout'
+import SEO from '../components/seo'
 
 import './about-page.styles.scss'
 
@@ -8,6 +9,12 @@ import './about-page.styles.scss'
 
 const AboutPage = ({data: {sanitySiteContent}}) => (
     <Layout>
+        <SEO 
+            title={'About'}
+            description={'About In the Know Local'}
+            image={sanitySiteContent.aboutImage.image.asset.fluid.srcWebp}
+            pathname={'/about'}
+        />
         <main className="container">
             <article className="about">
                 <h1 className="about__title about__title--main-title">{sanitySiteContent.aboutTitle}</h1>

@@ -6,11 +6,13 @@ import './layout.styles.scss'
 
 const Layout = ({children}) => {
     return (
-        <div className="container">
+        <>
             <Navbar />
-            {children}
+                <div className="container">
+                    {children}
+                </div>
             <Footer />
-        </div>
+        </>
     )
 }
 

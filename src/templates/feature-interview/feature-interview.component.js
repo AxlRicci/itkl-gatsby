@@ -7,11 +7,18 @@ import ArticleCover from '../../components/article-cover/article-cover.component
 import ArticleInterview from '../../components/article-interview/article-interview.component'
 import ArticleContact from '../../components/article-contact/article-contact.component'
 import SuggestedReading from '../../components/article-suggested-reading/article-suggested-reading.component'
+import SEO from '../../components/seo'
 
 const InterviewTemplate = ({data}) => {
-  const { basicInformation, contact, allAboutYou, interviewCover, _rawInterviewQuestions, type } = data.sanityFeatureInterview;
+  const { basicInformation, contact, allAboutYou, interviewCover, _rawInterviewQuestions, type, slug } = data.sanityFeatureInterview;
   return (
       <Layout>
+        <SEO 
+          title={basicInformation.fullName}
+          description={`In The Know Local Magazine Article for ${basicInformation.fullName} ${basicInformation.description}`}
+          image={interviewCover.image.asset.fluid.srcWebp}
+          pathname={slug.current}
+        />
           <IssueLayout
               cover={
                   <ArticleCover
@@ -73,6 +80,9 @@ query InterviewTemplate($slug: String) {
       }
       type {
         _rawInterviewQuestions
+      }
+      slug {
+        current
       }
     }
   }

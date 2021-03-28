@@ -1,6 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: "itkl",
+    title: "In The Know local",
+    titleTemplate: "%s | In The Know Local",
+    description: "In the Know Local. This is the description of the site :)",
+    url: "https://www.intheknowlocal.com",
+    image: "/images/icon.png",
+    twitterUsername: "@influencefactor"
   },
   plugins: [
     {

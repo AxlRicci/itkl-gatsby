@@ -43,7 +43,7 @@ const ContactForm = () => {
     // } 
 
     return (
-        <form id='contact-form' className="contact__form" name="Contact Form" method="POST" data-netlify="true">
+        <form id='contact-form' className="contact__form" name="Contact Form" method="POST" data-netlify="true" data-netlify-recaptcha="true">
             <input type="hidden" name="form-name" value="Contact Form"/>
             <div className="contact__input-section contact__input--text">
                 <input name='name' type="text" className="contact__input contact__input--name" id="name" placeholder="Enter your full name *" required/>

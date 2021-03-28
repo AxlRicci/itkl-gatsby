@@ -20,9 +20,9 @@ const Navbar = () => {
     return (
         <section className="navbar">
             <div className="navbar__content">
-                <a className="navbar__logo-link" to='/'>
+                <Link className="navbar__logo-link" to='/'>
                     <img className="navbar__logo" src="https://parablar.sirv.com/ITKL/logo/ITKL_Logo.jpg?w=250&h=119" alt="In The Know Local Logo"/>
-                </a>
+                </Link>
                 <nav id="navigation" className={`navbar__menu ${navToggled ? 'navbar__menu--active' : ''}`} aria-labelledby="menubutton">
                     <ul className="navbar__nav-list" role="menubar">
                         <li className="navbar__item" role="none">
