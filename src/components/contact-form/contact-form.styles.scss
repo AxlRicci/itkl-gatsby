@@ -1,0 +1,28 @@
+.contact {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--grey-2);
+    padding: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+  }
+
+  &__input-text-area {
+    height: 10rem;
+    width: 100%;
+    padding: 1rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+
+    border: none;
+    border-bottom: 1px solid var(--grey-2);
+  }
+}
