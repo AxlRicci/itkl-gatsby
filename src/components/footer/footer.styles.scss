@@ -1,0 +1,35 @@
+.footer {
+  background-color: var(--grey);
+  padding: 3rem 0;
+  color: var(--white);
+
+  &__content {
+    width: 100%;
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__about {
+    max-width: 100rem;
+    text-align: center;
+  }
+
+  &__about-title {
+    margin-bottom: 1rem;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__social-img {
+    width: 3rem;
+    height: auto;
+  }
+}

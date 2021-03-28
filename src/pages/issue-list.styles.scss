@@ -1,0 +1,20 @@
+.issue {
+  margin: 0 auto;
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+    @media only screen and (min-width: 90em) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    min-width: 34rem;
+    height: auto;
+  }
+}

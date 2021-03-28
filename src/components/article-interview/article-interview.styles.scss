@@ -1,0 +1,41 @@
+.article {
+  &__container {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__question {
+    margin-bottom: 1.25rem;
+  }
+
+  &__answer {
+
+    ul,ol {
+      padding-left: 4rem;
+    }
+
+    li {
+      font-size: 1.6rem;
+      padding-bottom: .5rem;
+    }
+
+    a {
+      font-weight: 600;
+      color: var(--red);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    blockquote {
+      margin-left: 2rem;
+      padding: 3rem;
+      font-size: 2rem;
+      border-left: 2px solid var(--grey-2);
+    }
+  }
+}

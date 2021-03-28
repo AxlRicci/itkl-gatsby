@@ -1,0 +1,20 @@
+.about {
+  margin: 8rem 0;
+  text-align: center;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 90rem;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  &__description {
+    text-align: center;
+    white-space: pre-line;
+  }
+}
