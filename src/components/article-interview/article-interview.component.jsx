@@ -9,12 +9,15 @@ import './article-interview.styles.scss'
 const ArticleInterview = ({ questions, answers }) => (
     <article className="article__container">
         {
-            questions.map((question, index) => (
-                <section className="article__q-a" key={question.number}>
-                    <PortableText className="article__question" content={question.answer}/>
-                    <PortableText className="article__answer" content={answers.find(answer => answer.number == question.number).answer} />
-                </section>
-            ))
+            questions.map((question) => (
+                // Check that a question and answer pair exist.
+                question.answer && answers.find(answer => answer.number == question.answer)?.answer) ? (
+                    <section className="article__q-a" key={question.number}>
+                        <PortableText className="article__question" content={question.answer}/>
+                        <PortableText className="article__answer" content={answers.find(answer => answer.number == question.number).answer} />
+                    </section>
+                ) : null
+            )
         }
     </article>
 )
