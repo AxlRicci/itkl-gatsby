@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../layouts/layout'
+import SEO from '../components/seo'
 
 import './issue-list.styles.scss'
 
@@ -11,6 +12,11 @@ import './issue-list.styles.scss'
 const IssueList = ({ data }) => {
     return (
         <Layout>
+            <SEO 
+                title={'Issues'}
+                description={'In the Know Local Issue Archive'}
+                pathname={'/issues'}
+            />
             <main className="container">
                   <section className="issue__grid">
                     {

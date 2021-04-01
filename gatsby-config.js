@@ -15,6 +15,12 @@ module.exports = {
         dataset: "development",
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: 'src/images/favicon.jpg'
+      },
+    },
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",

@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../layouts/layout'
+import SEO from '../components/seo'
 
 import { graphql } from 'gatsby'
 import ContactForm from '../components/contact-form/contact-form.component'
@@ -11,6 +12,11 @@ import './contact-page.styles.scss'
 const ContactPage = ({data: {sanitySiteContent}}) => {
     return (
         <Layout>
+            <SEO 
+                title={'Contact'}
+                description={'Get in touch with In the Know Local'}
+                pathname={'/contact'}
+            />
             <main className="container">
                 <div className="contact-form__container">
                     <section className="contact-form__content">
