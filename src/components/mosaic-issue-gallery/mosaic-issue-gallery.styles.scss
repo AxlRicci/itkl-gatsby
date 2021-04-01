@@ -35,7 +35,7 @@
     &--2 {
       grid-area: 6 / 1 / 8 / 3;
 
-      @media only screen and (min-width: 64em) {
+      @media only screen and (min-width: 40em) {
         grid-area: 4 / 2 / 7 / 5;
       }
 

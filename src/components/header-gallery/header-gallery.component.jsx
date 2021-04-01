@@ -3,7 +3,6 @@ import { StaticQuery, graphql} from 'gatsby'
 import './header-gallery.styles.scss';
 
 const HeaderGallery = ({data, mainImage, sideTopImage, sideBottomImage }) => {
-  console.log(data)
   return (
   <header className="header-gallery">
       <div className="header-gallery__item header-gallery__item--main">

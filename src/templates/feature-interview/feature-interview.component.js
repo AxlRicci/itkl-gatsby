@@ -15,7 +15,7 @@ const InterviewTemplate = ({data}) => {
       <Layout>
         <SEO 
           title={basicInformation.fullName}
-          description={`In The Know Local Magazine Article for ${basicInformation.fullName} ${basicInformation.description}`}
+          description={`In The Know Local Magazine Article for ${basicInformation.fullName}, ${basicInformation.description} showcasing ${basicInformation.area}`}
           image={interviewCover.image.asset.fluid.srcWebp}
           pathname={slug.current}
         />
@@ -38,7 +38,7 @@ const InterviewTemplate = ({data}) => {
                   <ArticleContact contactInfo={contact} fullName={basicInformation.fullName}/>
               }
               suggestedReading={
-                <SuggestedReading />
+                <SuggestedReading currentSlug={slug.current}/>
               }
           />
       </Layout>

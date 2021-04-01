@@ -12,17 +12,21 @@ const IssueList = ({ data }) => {
     return (
         <Layout>
             <main className="container">
-                <section className="issue__grid">
-                    {data.allSanityFeatureInterview.nodes.map((feature) => (
-                        <Link key={feature.slug.current} to={`/features/${feature.slug.current}`}>
-                            <img
-                                className="issue__img"
-                                alt={`${feature.basicInformation.fullName}'s In The Know Local Magazine Cover for ${feature.basicInformation.area}`}
-                                src={feature.interviewCover.image.asset.fluid.srcWebp}
-                            />
-                        </Link>
-                    ))}
-                </section>
+                  <section className="issue__grid">
+                    {
+                      data.allSanityFeatureInterview.nodes.map((feature) => (
+                          <Link key={feature.slug.current} to={`/features/${feature.slug.current}`}>
+                            <div className="">
+                              <img
+                                  className="issue__img"
+                                  alt={`${feature.basicInformation.fullName}'s In The Know Local Magazine Cover for ${feature.basicInformation.area}`}
+                                  src={feature.interviewCover.image.asset.fluid.srcWebp}
+                              />
+                            </div>
+                          </Link>
+                      ))
+                    }
+                  </section>
             </main>
         </Layout>
     )

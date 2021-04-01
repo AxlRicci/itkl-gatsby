@@ -1,20 +1,11 @@
-.issue {
-  margin: 0 auto;
-  &__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
-
-    @media only screen and (min-width: 90em) {
-      justify-content: flex-start;
-    }
-  }
-
-  &__img {
+.issue__grid {
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+  gap: 1rem;
+  
+  img {
     width: 100%;
-    min-width: 34rem;
     height: auto;
   }
 }

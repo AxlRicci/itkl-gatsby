@@ -18,7 +18,7 @@ const MosaicIssueGallery = ({featuredInterviews, features}) => {
             {
                 features.map((feature) => (
                     <div className={featuredIds.includes(feature.id) ? `issue-gallery__featured-item issue-gallery__featured-item--${featuredIds.indexOf(feature.id) + 1}` : `issue-gallery__item`} key={feature.id}> 
-                        <Link href={`features/${feature.slug.current}`}>
+                        <Link to={`features/${feature.slug.current}`}>
                             <img
                                 className="issue-gallery__img" 
                                 alt={feature.alt}
