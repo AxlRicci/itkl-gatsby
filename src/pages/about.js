@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import PortableText from 'react-portable-text'
 import Layout from '../layouts/layout'
 import SEO from '../components/seo'
 
@@ -11,7 +12,7 @@ const AboutPage = ({data: {sanitySiteContent}}) => (
     <Layout>
         <SEO 
             title={'About'}
-            description={'About In the Know Local'}
+            description={'What is In the Know Local?'}
             image={sanitySiteContent.aboutImage.image.asset.fluid.srcWebp}
             pathname={'/about'}
         />
@@ -21,7 +22,7 @@ const AboutPage = ({data: {sanitySiteContent}}) => (
                 <h2 className="about__title about__title--subtitle">{sanitySiteContent.aboutSubtitle}</h2>
                 <img src={sanitySiteContent.aboutImage.image.asset.fluid.srcWebp} alt={sanitySiteContent.aboutImage.alt} className="about__image"/>
                 <div className="about__description">
-                    <p>{sanitySiteContent.aboutBody}</p>
+                    <PortableText content={sanitySiteContent._rawAboutBody} />
                 </div>
             </article>
         </main>
@@ -45,7 +46,7 @@ query AboutPageQuery {
         }
         alt
         }
-        aboutBody
+        _rawAboutBody
     }
   }
 `

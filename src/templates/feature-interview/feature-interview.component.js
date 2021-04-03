@@ -10,13 +10,13 @@ import SuggestedReading from '../../components/article-suggested-reading/article
 import SEO from '../../components/seo'
 
 const InterviewTemplate = ({data}) => {
-  const { basicInformation, contact, allAboutYou, interviewCover, _rawInterviewQuestions, type, slug } = data.sanityFeatureInterview;
+  const { basicInformation, contact, socialDescription, socialCover, socialTitle, interviewCover, _rawInterviewQuestions, type, slug } = data.sanityFeatureInterview;
   return (
       <Layout>
         <SEO 
-          title={basicInformation.fullName}
-          description={`In The Know Local Magazine Article for ${basicInformation.fullName}, ${basicInformation.description} showcasing ${basicInformation.area}`}
-          image={interviewCover.image.asset.fluid.srcWebp}
+          title={socialTitle || `${basicInformation.fullName} | In The Know Local`}
+          description={socialDescription || `In The Know Local Magazine Article for ${basicInformation.fullName}, ${basicInformation.description} showcasing ${basicInformation.area}`}
+          image={socialCover?.asset.fluid.srcWebp || interviewCover.image.asset.fluid.srcWebp}
           pathname={slug.current}
         />
           <IssueLayout
@@ -55,17 +55,18 @@ query InterviewTemplate($slug: String) {
         description
         area
       }
-      allAboutYou {
-        children {
-          marks
-          text
-        }
-        list
-        style
-      }
       contact {
         contactType
         url
+      }
+      socialDescription
+      socialTitle
+      socialCover {
+        asset {
+          fluid {
+            srcWebp
+          }
+        }
       }
       _rawInterviewQuestions
       interviewCover {

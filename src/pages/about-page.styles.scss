@@ -16,5 +16,15 @@
   &__description {
     text-align: center;
     white-space: pre-line;
+
+    p {
+      padding-bottom: .75rem;
+      line-height: 1.7;
+      min-height: 1rem;
+    }
+    span {
+      min-height: 1rem;
+      line-height: 1;
+    }
   }
 }

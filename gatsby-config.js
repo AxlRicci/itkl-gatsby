@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "In The Know local",
-    titleTemplate: "%s | In The Know Local",
-    description: "In the Know Local. This is the description of the site :)",
+    titleTemplate: "%s",
+    description: "In The Know Local is a publication dedicated to showcasing incredible locals and their cities. Click on any of our covers and it will be easy to eat, drink, explore and shop like a local. Through short Q+A articles, we enliven your adventurous side and tempt you to dive into someone else’s city and discover all the joy and delight within.",
     url: "https://www.intheknowlocal.com",
     image: "/images/icon.png",
     twitterUsername: "@influencefactor"

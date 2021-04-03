@@ -1,5 +1,4 @@
 import React from 'react'
-import { StaticQuery, graphql} from 'gatsby'
 import './header-gallery.styles.scss';
 
 const HeaderGallery = ({data, mainImage, sideTopImage, sideBottomImage }) => {
