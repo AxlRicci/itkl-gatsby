@@ -13,9 +13,9 @@ const IssueList = ({ data }) => {
     return (
         <Layout>
             <SEO 
-                title={'Issues'}
-                description={'In the Know Local Issue Archive'}
-                pathname={'/issues'}
+                title={'Our Picks'}
+                description={'In the Know Local - Our Local Picks'}
+                pathname={'/our-picks'}
             />
             <main className="container">
                   <section className="issue__grid">

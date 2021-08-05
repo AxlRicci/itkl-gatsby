@@ -16,18 +16,24 @@ const MosaicIssueGallery = ({featuredInterviews, features}) => {
     return (
         <section className="issue-gallery">
             {
-                features.map((feature) => (
-                    <div className={featuredIds.includes(feature.id) ? `issue-gallery__featured-item issue-gallery__featured-item--${featuredIds.indexOf(feature.id) + 1}` : `issue-gallery__item`} key={feature.id}> 
-                        <Link to={`features/${feature.slug.current}`}>
-                            <img
-                                className="issue-gallery__img" 
-                                alt={feature.alt}
-                                src={feature.interviewCover.image.asset.fluid.srcWebp}
-                            />
-                        </Link>
-                        <span className="sr-only">{feature.alt}</span>
-                    </div>
-                ))
+                features.map((feature, index) => {
+                    if (index < 20) {
+                        return (
+                            <div className={featuredIds.includes(feature.id) ? `issue-gallery__featured-item issue-gallery__featured-item--${featuredIds.indexOf(feature.id) + 1}` : `issue-gallery__item`} key={feature.id}> 
+                                <Link to={`features/${feature.slug.current}`}>
+                                    <img
+                                        className="issue-gallery__img" 
+                                        alt={feature.alt}
+                                        src={feature.interviewCover.image.asset.fluid.srcWebp}
+                                    />
+                                </Link>
+                                <span className="sr-only">{feature.alt}</span>
+                            </div>
+                        )
+                    } else {
+                        return null
+                    }
+                })
             }
         </section>
     )
